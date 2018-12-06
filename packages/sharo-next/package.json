@@ -37,7 +37,9 @@
     "xo": "^0.23.0"
   },
   "husky": {
-    "pre-commit": "npm test"
+    "hooks": {
+      "pre-commit": "npm test"
+    }
   },
   "xo": {
     "semicolon": false,
