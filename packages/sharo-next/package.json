@@ -1,0 +1,46 @@
+{
+  "name": "@tkesgar/sharo-next",
+  "version": "0.0.0",
+  "description": "Next.js plugin used for sharo boilerplate",
+  "author": "Ted Kesgar <t.kesgar@live.com> (https://tkesgar.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkesgar/sharo-next.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tkesgar/sharo-next/issues"
+  },
+  "homepage": "https://github.com/tkesgar/sharo-next#readme",
+  "main": "index.js",
+  "scripts": {
+    "next": "next",
+    "lint": "xo",
+    "test": "npm run lint && jest"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^0.15.7",
+    "@zeit/next-bundle-analyzer": "^0.1.2",
+    "@zeit/next-mdx": "^1.2.0",
+    "@zeit/next-sass": "^1.0.0",
+    "@zeit/next-workers": "^1.0.0",
+    "acorn": "^6.0.4",
+    "node-sass": "^4.10.0",
+    "worker-loader": "^2.0.0"
+  },
+  "devDependencies": {
+    "husky": "^1.2.0",
+    "jest": "^23.6.0",
+    "next": "^7.0.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "xo": "^0.23.0"
+  },
+  "husky": {
+    "pre-commit": "npm test"
+  },
+  "xo": {
+    "semicolon": false,
+    "space": 2
+  }
+}
