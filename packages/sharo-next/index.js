@@ -3,9 +3,6 @@ const withBundleAnalyzer = require('@zeit/next-bundle-analyzer')
 const withSass = require('@zeit/next-sass')
 const withWorkers = require('@zeit/next-workers')
 
-// https://github.com/zeit/next-plugins/issues/320
-const withMdx = require('@zeit/next-mdx')()
-
 /**
  * This function is a Next.js plugin for sharo.
  *
@@ -34,24 +31,57 @@ const withMdx = require('@zeit/next-mdx')()
 function withSharo(nextConfig = {}) {
   const {BUNDLE_ANALYZE} = process.env
 
-  return withBundleAnalyzer(withWorkers(withSass(withMdx({
-    ...nextConfig,
+  // https://github.com/zeit/next-plugins/issues/320
+  const withMdx = require('@zeit/next-mdx')({
+  // Allow regular markdown files (*.md) to be imported.
+    extension: /\.mdx?$/
+  })
 
-    // Configuration for next-bundle-analyzer so it can be controlled via
-    // BUNDLE_ANALYZE environment variables.
-    analyzeServer: ['server', 'both'].includes(BUNDLE_ANALYZE),
-    analyzeBrowser: ['browser', 'both'].includes(BUNDLE_ANALYZE),
-    bundleAnalyzerConfig: {
-      server: {
-        analyzerMode: 'static',
-        reportFilename: path.resolve('./bundles/server.html')
-      },
-      browser: {
-        analyzerMode: 'static',
-        reportFilename: path.resolve('./bundles/client.html')
-      }
-    }
-  }))))
+  return (
+    withBundleAnalyzer(withWorkers(withSass(withMdx(
+      Object.assign(
+        // =====================================================================
+        // Default configurations (can be overridden by nextConfig)
+        // =====================================================================
+        {
+          // Configuration for next-bundle-analyzer so it can be controlled via
+          // BUNDLE_ANALYZE environment variables.
+          analyzeServer: ['server', 'both'].includes(BUNDLE_ANALYZE),
+          analyzeBrowser: ['browser', 'both'].includes(BUNDLE_ANALYZE),
+          bundleAnalyzerConfig: {
+            server: {
+              analyzerMode: 'static',
+              reportFilename: path.resolve('./bundles/server.html')
+            },
+            browser: {
+              analyzerMode: 'static',
+              reportFilename: path.resolve('./bundles/client.html')
+            }
+          }
+        },
+        // =====================================================================
+        // Override default configurations with nextConfig
+        // =====================================================================
+        nextConfig,
+        // =====================================================================
+        // Override nextConfig configurations
+        // (note to self: follow Next.js rules on this section)
+        // =====================================================================
+        {
+          webpack(config, options) {
+          // Allow autoresolving of MDX (*.md, *.mdx) and SCSS (*.scss, *.sass)
+            config.resolve.extensions.push('.md', '.mdx', '.scss', '.sass')
+
+            if (typeof nextConfig.webpack === 'function') {
+              return nextConfig.webpack(config, options)
+            }
+
+            return config
+          }
+        }
+      )
+    ))))
+  )
 }
 
 module.exports = withSharo
