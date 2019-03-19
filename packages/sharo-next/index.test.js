@@ -6,7 +6,7 @@ const {execSync: exec} = require('child_process')
 describe('default', () => {
   const cwd = path.resolve('./sample/default')
   const clientBundlePath = path.resolve(cwd, 'bundles/client.html')
-  const serverBundlePath = path.resolve(cwd, 'bundles/client.html')
+  const serverBundlePath = path.resolve(cwd, 'bundles/server.html')
 
   beforeAll(() => {
     for (const path of [clientBundlePath, serverBundlePath]) {
