@@ -1,7 +1,4 @@
-const path = require('path')
-const withBundleAnalyzer = require('@zeit/next-bundle-analyzer')
 const withSass = require('@zeit/next-sass')
-const withWorkers = require('@zeit/next-workers')
 
 /**
  * This function is a Next.js plugin for sharo.
@@ -29,8 +26,6 @@ const withWorkers = require('@zeit/next-workers')
  * @returns {any} New Next.js configuration object
  */
 function withSharo(nextConfig = {}) {
-  const {BUNDLE_ANALYZE} = process.env
-
   // https://github.com/zeit/next-plugins/issues/320
   const withMdx = require('@zeit/next-mdx')({
   // Allow regular markdown files (*.md) to be imported.
@@ -38,26 +33,13 @@ function withSharo(nextConfig = {}) {
   })
 
   return (
-    withBundleAnalyzer(withWorkers(withSass(withMdx(
+    withSass(withMdx(
       Object.assign(
         // =====================================================================
         // Default configurations (can be overridden by nextConfig)
         // =====================================================================
         {
-          // Configuration for next-bundle-analyzer so it can be controlled via
-          // BUNDLE_ANALYZE environment variables.
-          analyzeServer: ['server', 'both'].includes(BUNDLE_ANALYZE),
-          analyzeBrowser: ['browser', 'both'].includes(BUNDLE_ANALYZE),
-          bundleAnalyzerConfig: {
-            server: {
-              analyzerMode: 'static',
-              reportFilename: path.resolve('./bundles/server.html')
-            },
-            browser: {
-              analyzerMode: 'static',
-              reportFilename: path.resolve('./bundles/client.html')
-            }
-          }
+          // Currently empty
         },
         // =====================================================================
         // Override default configurations with nextConfig
@@ -80,7 +62,7 @@ function withSharo(nextConfig = {}) {
           }
         }
       )
-    ))))
+    ))
   )
 }
 
