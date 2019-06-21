@@ -22,10 +22,10 @@
     "node": ">=10"
   },
   "dependencies": {
-    "styled-jsx-plugin-postcss": "^2.0.0"
+    "styled-jsx-plugin-postcss": "^2.0.1"
   },
   "devDependencies": {
-    "husky": "^2.2.0",
+    "husky": "^2.4.1",
     "xo": "^0.24.0"
   },
   "peerDependencies": {
