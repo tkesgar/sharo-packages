@@ -4,23 +4,13 @@ const withSass = require('@zeit/next-sass')
  * This function is a Next.js plugin for sharo.
  *
  * Features:
- *   - Bundle analysis reporter via `@zeit/next-bundle-analyzer`
  *   - MDX support via `@zeit/next-mdx`
- *   - Web Workers transpilation support via `@zeit/next-workers`
  *   - SASS/SCSS support via `@zeit/next-sass`
- *
- * To generate bundle analysis report, provide `BUNDLE_ANALYZE` environment
- * variable with one of the following values:
- *   - `server`: generate server report only
- *   - `client`: generate client report only
- *   - `both`: generate both server and client report
  *
  * Docs:
  *   - https://nextjs.org/docs#custom-configuration
- *   - https://www.npmjs.com/package/@zeit/next-bundle-analyzer
  *   - https://www.npmjs.com/package/@zeit/next-mdx
  *   - https://www.npmjs.com/package/@zeit/next-sass
- *   - https://www.npmjs.com/package/@zeit/next-workers
  *
  * @param {any} nextConfig Next.js configuration object
  * @returns {any} New Next.js configuration object
