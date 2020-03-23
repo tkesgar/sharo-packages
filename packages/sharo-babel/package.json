@@ -25,11 +25,11 @@
     "styled-jsx-plugin-postcss": "^2.0.1"
   },
   "devDependencies": {
-    "husky": "^3.0.4",
-    "xo": "^0.24.0"
+    "husky": "^4.2.3",
+    "xo": "^0.28.0"
   },
   "peerDependencies": {
-    "next": ""
+    "next": "*"
   },
   "husky": {
     "hooks": {
