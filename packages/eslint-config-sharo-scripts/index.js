@@ -1,26 +1,49 @@
 module.exports = {
-  // ESLint configurations
-  // =====================
   extends: [
-    'xo-react'
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'prettier/react'
   ],
-  // Use babel-eslint parser for esnext features.
-  parser: 'babel-eslint',
-  settings: {
-    'import/resolver': {
-      node: {
-        // Add .md, .mdx, and .scss into autoresolved extensions.
-        extensions: ['.js', '.jsx', '.md', '.mdx', '.scss']
+  env: {
+    browser: true
+  },
+  parserOptions: {
+    ecmaVersion: 2020
+  },
+  overrides: [
+    {
+      files: '**/*.{ts,tsx}',
+      parser: '@typescript-eslint/parser',
+      plugins: [
+        '@typescript-eslint'
+      ],
+      extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:react/recommended',
+        'plugin:prettier/recommended',
+        'prettier/@typescript-eslint',
+        'prettier/react'
+      ],
+      settings: {
+        react: {
+          version: 'detect'
+        }
+      }
+    },
+    {
+      files: 'cypress/**/*.js',
+      plugins: [
+        'chai-friendly'
+      ],
+      extends: [
+        'plugin:cypress/recommended'
+      ],
+      rules: {
+        'chai-friendly/no-unused-expressions': 'error'
       }
     }
-  }
-  // XO configurations
-  // =================
-  // Note: wait for https://github.com/xojs/xo/issues/352
-  /*
-  xo: {
-    space: 2,
-    semicolon: false
-  }
-  */
+  ]
 }
