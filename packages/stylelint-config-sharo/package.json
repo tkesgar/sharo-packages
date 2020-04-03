@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-sharo",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "stylelint shareable configuration for sharo",
   "author": "Ted Kesgar <t.kesgar@live.com> (https://tkesgar.com)",
   "license": "MIT",
