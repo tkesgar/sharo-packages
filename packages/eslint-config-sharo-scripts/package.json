@@ -17,7 +17,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "xo"
+    "lint": "xo"
   },
   "engines": {
     "node": ">=10"
@@ -41,7 +41,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test"
+      "pre-commit": "npm run lint"
     }
   },
   "xo": {
