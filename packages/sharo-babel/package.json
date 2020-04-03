@@ -18,9 +18,6 @@
   "scripts": {
     "lint": "xo"
   },
-  "engines": {
-    "node": ">=10"
-  },
   "dependencies": {
     "styled-jsx-plugin-postcss": "^2.0.1"
   },
