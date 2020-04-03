@@ -1,0 +1,39 @@
+{
+  "name": "stylelint-config-sharo",
+  "version": "0.0.0",
+  "description": "stylelint shareable configuration for sharo",
+  "author": "Ted Kesgar <t.kesgar@live.com> (https://tkesgar.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkesgar/stylelint-config-sharo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tkesgar/stylelint-config-sharo/issues"
+  },
+  "homepage": "https://github.com/tkesgar/stylelint-config-sharo#readme",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "xo"
+  },
+  "dependencies": {
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-scss": "^3.16.0"
+  },
+  "devDependencies": {
+    "husky": "^4.2.3",
+    "xo": "^0.28.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "xo": {
+    "space": 2,
+    "semicolon": false
+  }
+}
