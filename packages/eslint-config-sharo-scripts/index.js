@@ -5,6 +5,11 @@ module.exports = {
     'plugin:prettier/recommended',
     'prettier/react'
   ],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   env: {
     browser: true
   },
