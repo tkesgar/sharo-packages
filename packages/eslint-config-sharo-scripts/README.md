@@ -9,7 +9,7 @@ This is the [ESLint][eslint] shareable configuration for [sharo][sharo]
 - TypeScript support with the recommended `@typescript-eslint` rules
 - Prettier support via `eslint-plugin-prettier`
 - Jest support via `eslint-plugin-jest` with `recommended` and `style` rules
-- Cypress support via `eslint-plugin-cypress`
+- Cypress support via `eslint-plugin-cypress` and `eslint-plugin-chai-friendly`
 
 ## License
 
