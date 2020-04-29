@@ -11,6 +11,11 @@ This is the [ESLint][eslint] shareable configuration for [sharo][sharo]
 - Jest support via `eslint-plugin-jest` with `recommended` and `style` rules
 - Cypress support via `eslint-plugin-cypress` and `eslint-plugin-chai-friendly`
 
+## Notes
+
+- Cypress tests should be written in JS
+- Jest tests should be written in TS
+
 ## License
 
 Licensed under [MIT License][license].

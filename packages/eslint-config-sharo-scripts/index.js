@@ -2,8 +2,6 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:jest/recommended',
-    'plugin:jest/style',
     'plugin:prettier/recommended',
     'prettier/react'
   ],
