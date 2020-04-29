@@ -19,9 +19,6 @@
   "scripts": {
     "lint": "xo"
   },
-  "engines": {
-    "node": ">=10"
-  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.19.2",
     "@typescript-eslint/parser": "^2.19.2",
