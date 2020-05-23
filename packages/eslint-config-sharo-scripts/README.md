@@ -10,6 +10,7 @@ This is the [ESLint][eslint] shareable configuration for [sharo][sharo]
 - Prettier support via `eslint-plugin-prettier`
 - Jest support via `eslint-plugin-jest` with `recommended` and `style` rules
 - Cypress support via `eslint-plugin-cypress` and `eslint-plugin-chai-friendly`
+- Lint some accessibility issues in JSX via `jsx-a11y`
 
 ## Notes
 
