@@ -1,3 +1,5 @@
+const createWithMDX = require('@zeit/next-mdx')
+
 /**
  * This function is a Next.js plugin for sharo.
  *
@@ -13,12 +15,12 @@
  */
 function withSharo(nextConfig = {}) {
   // https://github.com/zeit/next-plugins/issues/320
-  const withMdx = require('@zeit/next-mdx')({
+  const withMDX = createWithMDX({
     // Allow regular markdown files (*.md) to be imported.
     extension: /\.mdx?$/
   })
 
-  return withMdx(
+  return withMDX(
     Object.assign(
       // =====================================================================
       // Default configurations (can be overridden by nextConfig)
