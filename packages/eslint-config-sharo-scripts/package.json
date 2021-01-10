@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sharo-scripts",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "ESLint shareable configuration for sharo",
   "author": "Ted Kesgar <t.kesgar@live.com> (https://tkesgar.com)",
   "license": "MIT",
