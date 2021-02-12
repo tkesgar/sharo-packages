@@ -1,54 +1,14 @@
-const createWithMDX = require('@zeit/next-mdx')
+const nextMDX = require('@next/mdx')
+const nextBundleAnalyzer = require('@next/bundle-analyzer')
 
-/**
- * This function is a Next.js plugin for sharo.
- *
- * Features:
- *   - MDX support via `@zeit/next-mdx`
- *
- * Docs:
- *   - https://nextjs.org/docs#custom-configuration
- *   - https://www.npmjs.com/package/@zeit/next-mdx
- *
- * @param {any} nextConfig Next.js configuration object
- * @returns {any} New Next.js configuration object
- */
-function withSharo(nextConfig = {}) {
-  // https://github.com/zeit/next-plugins/issues/320
-  const withMDX = createWithMDX({
-    // Allow regular markdown files (*.md) to be imported.
-    extension: /\.mdx?$/
-  })
+const withBundleAnalyzer = nextBundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true'
+})
+const withMDX = nextMDX()
 
-  return withMDX(
-    Object.assign(
-      // =====================================================================
-      // Default configurations (can be overridden by nextConfig)
-      // =====================================================================
-      {
-        // Currently empty
-      },
-      // =====================================================================
-      // Override default configurations with nextConfig
-      // =====================================================================
-      nextConfig,
-      // =====================================================================
-      // Override nextConfig configurations
-      // (note to self: follow Next.js rules on this section)
-      // =====================================================================
-      {
-        webpack(config, options) {
-          config.resolve.extensions.push('.md', '.mdx')
-
-          if (typeof nextConfig.webpack === 'function') {
-            return nextConfig.webpack(config, options)
-          }
-
-          return config
-        }
-      }
-    )
-  )
+module.exports = () => (nextConfig = {}) => {
+  return withBundleAnalyzer(withMDX({
+    pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
+    ...nextConfig
+  }))
 }
-
-module.exports = withSharo
