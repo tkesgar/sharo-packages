@@ -19,14 +19,14 @@
     "lint": "xo"
   },
   "dependencies": {
-    "styled-jsx-plugin-postcss": "^2.0.1"
+    "styled-jsx-plugin-postcss": "^4.0.1"
   },
   "devDependencies": {
-    "husky": "^4.2.5",
-    "xo": "^0.32.1"
+    "husky": "^4.3.8",
+    "xo": "^0.37.1"
   },
   "peerDependencies": {
-    "next": "*"
+    "next": "^10"
   },
   "husky": {
     "hooks": {
