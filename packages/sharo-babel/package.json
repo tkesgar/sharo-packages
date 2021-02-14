@@ -1,6 +1,6 @@
 {
   "name": "@tkesgar/sharo-babel",
-  "version": "1.0.0",
+  "version": "2.0.0-beta",
   "description": "Babel configuration for sharo",
   "author": "Ted Kesgar <t.kesgar@live.com> (https://tkesgar.com)",
   "license": "MIT",
