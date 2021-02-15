@@ -15,26 +15,10 @@
   "files": [
     "index.js"
   ],
-  "scripts": {
-    "lint": "xo"
-  },
   "dependencies": {
     "styled-jsx-plugin-postcss": "^4.0.1"
   },
-  "devDependencies": {
-    "husky": "^4.3.8",
-    "xo": "^0.37.1"
-  },
   "peerDependencies": {
     "next": "^10"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
-  "xo": {
-    "space": 2,
-    "semicolon": false
   }
 }

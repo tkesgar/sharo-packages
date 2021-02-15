@@ -2,6 +2,20 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "husky": "^4.3.8",
+    "lerna": "^3.22.1",
+    "xo": "^0.37.1"
+  },
+  "scripts": {
+    "lint": "xo"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "xo": {
+    "space": 2,
+    "semicolon": false
   }
 }
