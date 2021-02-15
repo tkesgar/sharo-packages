@@ -3,7 +3,23 @@
 This is the [ESLint][eslint] shareable configuration for [sharo][sharo]
 [Next.js][next] boilerplate.
 
-## What this config does
+## Installation
+
+```bash
+npm i eslint-config-sharo-scripts --save-dev
+```
+
+## Usage
+
+Add into ESLint configuration (e.g. `.eslintrc.json`):
+
+```json
+{
+  "extends": "sharo-scripts"
+}
+```
+
+## What is included
 
 - JavaScript support with the recommended `eslint` rules
 - TypeScript support with the recommended `@typescript-eslint` rules
@@ -58,11 +74,10 @@ such as [react-axe].
 
 ## License
 
-Licensed under [MIT License][license].
+Licensed under MIT License.
 
 [anchor-workaround]: https://github.com/evcohen/eslint-plugin-jsx-a11y/issues/402#issuecomment-368305051
 [eslint]: https://eslint.org/
-[license]: https://github.com/tkesgar/eslint-config-sharo-scripts/blob/master/LICENSE
 [next]: https://nextjs.org/docs
 [react-axe]: https://github.com/dequelabs/react-axe
 [sharo]: https://github.com/tkesgar/sharo
