@@ -3,7 +3,6 @@
 This is the `next.config.js` configuration plugin for [sharo][sharo] [Next.js][next]
 boilerplate.
 
-
 It adds support for [MDX Markdown files][mdx] and [Webpack bundle analyzer][bundle-analyzer].
 
 ## Installation

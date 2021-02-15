@@ -1,14 +1,13 @@
-
 # sharo-packages
 
 This is a monorepo for packages for [sharo] Next.js boilerplate.
 
-| Package                         | What is it?                | Status
-|---------------------------------|----------------------------|--------|
-| **@tkesgar/sharo-next**         | `next.config.js` plugin    | ![npm package version](https://img.shields.io/npm/v/@tkesgar/sharo-next)
-| **@tkesgar/sharo-babel**        | Babel config               | ![npm package version](https://img.shields.io/npm/v/@tkesgar/sharo-babel)
-| **eslint-config-sharo-scripts** | ESLint shareable config    | ![npm package version](https://img.shields.io/npm/v/eslint-config-sharo-scripts)
-| **stylelint-config-sharo**      | stylelint shareable config | ![npm package version](https://img.shields.io/npm/v/stylelint-config-sharo)
+| Package                         | What is it?                | Status                                                                           |
+| ------------------------------- | -------------------------- | -------------------------------------------------------------------------------- |
+| **@tkesgar/sharo-next**         | `next.config.js` plugin    | ![npm package version](https://img.shields.io/npm/v/@tkesgar/sharo-next)         |
+| **@tkesgar/sharo-babel**        | Babel config               | ![npm package version](https://img.shields.io/npm/v/@tkesgar/sharo-babel)        |
+| **eslint-config-sharo-scripts** | ESLint shareable config    | ![npm package version](https://img.shields.io/npm/v/eslint-config-sharo-scripts) |
+| **stylelint-config-sharo**      | stylelint shareable config | ![npm package version](https://img.shields.io/npm/v/stylelint-config-sharo)      |
 
 For information on each packages, please refer to its documentation. For information on the boilerplate itself, please refer to [sharo README][sharo].
 
