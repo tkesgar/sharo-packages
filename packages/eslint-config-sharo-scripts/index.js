@@ -5,7 +5,6 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
-    "prettier/react",
   ],
   rules: {
     /**
@@ -48,8 +47,6 @@ module.exports = {
         "plugin:jest/recommended",
         "plugin:jest/style",
         "plugin:prettier/recommended",
-        "prettier/@typescript-eslint",
-        "prettier/react",
       ],
       rules: {
         /**
