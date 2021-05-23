@@ -6,11 +6,13 @@ const withBundleAnalyzer = nextBundleAnalyzer({
 });
 const withMDX = nextMDX();
 
-module.exports = () => (nextConfig = {}) => {
-  return withBundleAnalyzer(
-    withMDX({
-      pageExtensions: ["mdx", "jsx", "js", "ts", "tsx"],
-      ...nextConfig,
-    })
-  );
-};
+module.exports =
+  () =>
+  (nextConfig = {}) => {
+    return withBundleAnalyzer(
+      withMDX({
+        pageExtensions: ["mdx", "jsx", "js", "ts", "tsx"],
+        ...nextConfig,
+      })
+    );
+  };

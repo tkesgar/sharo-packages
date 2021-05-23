@@ -2,19 +2,21 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "husky": "^5.0.9",
-    "lerna": "^3.22.1",
-    "lint-staged": "^10.5.4",
-    "prettier": "~2.2.1",
-    "xo": "^0.37.1"
+    "husky": "^6.0.0",
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "~2.3.0",
+    "xo": "^0.40.1"
   },
   "scripts": {
     "lint": "xo",
-    "format": "prettier --write .",
-    "postinstall": "npx husky install"
+    "format": "prettier --write ."
   },
   "xo": {
     "space": 2,
-    "semicolon": false
+    "semicolon": false,
+    "rules": {
+      "unicorn/prefer-module": 1
+    }
   }
 }
