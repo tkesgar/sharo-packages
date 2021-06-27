@@ -16,13 +16,13 @@ npm i @tkesgar/sharo-next
 Add into `next.config.js`:
 
 ```js
-const sharoNext = require("@tkesgar/sharo-next");
+const sharoNext = require('@tkesgar/sharo-next')
 
-const withSharo = sharoNext();
+const withSharo = sharoNext()
 
 module.exports = withSharo({
   // https://nextjs.org/docs/api-reference/next.config.js/introduction
-});
+})
 ```
 
 ## What is included

@@ -16,7 +16,8 @@
     "space": 2,
     "semicolon": false,
     "rules": {
-      "unicorn/prefer-module": 1
-    }
+      "unicorn/prefer-module": 0
+    },
+    "prettier": true
   }
 }
