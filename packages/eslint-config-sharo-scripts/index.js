@@ -8,6 +8,13 @@ module.exports = {
       rules: {
         'chai-friendly/no-unused-expressions': 'error'
       }
+    },
+    {
+      files: [
+        '**/**.{test,spec}.{js,jsx,ts,tsx}',
+        '**/__tests__/**.{js,jsx,ts,tsx}'
+      ],
+      extends: ['plugin:jest/recommended', 'plugin:jest/style']
     }
   ]
 }
