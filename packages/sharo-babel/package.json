@@ -19,6 +19,6 @@
     "styled-jsx-plugin-postcss": "^4.0.1"
   },
   "peerDependencies": {
-    "next": "^10"
+    "next": "*"
   }
 }
