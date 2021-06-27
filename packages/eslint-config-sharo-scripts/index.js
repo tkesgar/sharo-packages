@@ -1,5 +1,9 @@
 module.exports = {
   extends: ['next', 'eslint:recommended', 'plugin:prettier/recommended'],
+  env: {
+    browser: true,
+    node: true
+  },
   overrides: [
     {
       files: 'cypress/**/*.js',
